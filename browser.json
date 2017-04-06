@@ -22,5 +22,5 @@
   "timers": "timers-browserify",
   "tty": "tty-browserify",
   "vm": "vm-browserify",
-  "websocket-streamm": "rn-websocket-stream"
+  "websocket-stream": "rn-websocket-stream"
 }
