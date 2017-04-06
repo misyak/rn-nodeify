@@ -28,5 +28,6 @@ module.exports = {
   "url": "~0.10.1",
   "util": "~0.10.3",
   "react-native-tcp": "^2.0.4",
-  "vm-browserify": "0.0.4"
+  "vm-browserify": "0.0.4",
+  "rn-websocket-stream": "~2.0.3"
 }
