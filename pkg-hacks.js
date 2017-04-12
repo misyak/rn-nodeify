@@ -67,6 +67,36 @@ module.exports = function hackFiles (hacks) {
 // loadDeps(hackFiles)
 
 var hackers = [
+  // some extra hacks
+  {
+    name: 'mqtt',
+    regex: [
+      /mqtt\/package\.json$/
+    ],
+    hack: function (file, contents) {
+
+      var fixed = contents.replace(
+        /.\/mqtt.js/g,
+        "mqtt.js"
+      )
+
+      return contents === fixed ? null : fixed
+    }
+  },
+  {
+    name: 'rn-websocket-stream',
+    regex: [
+      /rn-websocket-stream\/package\.json$/
+    ],
+    hack: function (file, contents) {
+      var fixed = contents.replace(
+        /.\/index.js/g,
+        "index.js"
+      )
+
+      return contents === fixed ? null : fixed
+    }
+  },
   // don't need this as soon as react native
   // stops ignoring webtorrent/package.json "browser": "./lib/fs-storage.js": false
   {
